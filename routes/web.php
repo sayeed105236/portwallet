@@ -19,4 +19,4 @@ use App\Http\Controllers\PortWalletController;
 //});
 Route::get('/', [PortwalletController::class,'home'])->name('home');
 Route::post('/payment',[PortwalletController::class,'payment'])->name('payment');
-//Route::get('/portwallet/portwallet_verify_transaction/shopping_cart',[PortwalletController::class,'portwalletVerifyTransaction']);
+Route::get('/portwallet/portwallet_verify_transaction/',[PortwalletController::class,'portwalletVerifyTransaction']);

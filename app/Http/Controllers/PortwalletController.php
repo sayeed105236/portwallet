@@ -123,11 +123,15 @@ class PortwalletController extends Controller
            echo $ex->getMessage();
        }
 
-        //return redirect($paymentUrl);
-        $notification=array(
-            'message'=>'Congratulations Course has been successfully Enrolled!!!',
-            'alert-type'=>'success'
-        );
-        return redirect($paymentUrl)->with($notification);
+        return redirect($paymentUrl);
+
    }
+   public function portwalletVerifyTransaction() {
+
+
+           return redirect('https://globaskills.com.bd/paymentsuccess');
+
+       }
+
+
 }
