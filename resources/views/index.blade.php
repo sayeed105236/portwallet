@@ -45,7 +45,7 @@
               <label class="error" id="cp_error_msg"></label>
               <label for="recharge_labbel"  class="col-xs-4 control-label lableclass">Full Name</label>
               <div class="col-sm-4 col-xs-8  mobile_other mobile_data">
-                <input type="text" name="customer_phone" class="form-control" id="customer_phone" required placeholder="Enter your full name" data-error="Enter your full Name." autocomplete="off" value="" >
+                <input type="text" name="name" class="form-control" id="customer_phone" required placeholder="Enter your full name" data-error="Enter your full Name." autocomplete="off" value="" >
                 <div id="cp-error" class="help-block with-errors"></div>
               </div>
             </div>
@@ -61,7 +61,7 @@
               <label class="error" id="amount_error_msg"></label>
               <label for="recharge_labbel"  class="col-xs-4 control-label lableclass amount-lbl">Mobile Number</label>
               <div class="col-sm-4 col-xs-8  mobile_other mobile_data">
-                <input name="mobile_number" class="form-control" id="mobile_number" required placeholder="01XXXXXXXXX" data-error="Please enter mobile number."  autocomplete="off" value="" type="phone">
+                <input name="number" class="form-control" id="mobile_number" required placeholder="01XXXXXXXXX" data-error="Please enter mobile number."  autocomplete="off" value="" type="phone">
                 <div id="mobile-error" class="help-block with-errors"></div>
               </div>
             </div>
@@ -72,7 +72,7 @@
               <label class="error" id="cp_error_msg"></label>
               <label for="recharge_labbel"  class="col-xs-4 control-label lableclass">Select Course</label>
               <div class="col-sm-4 col-xs-8  mobile_other mobile_data">
-                <select class="form-control" id="exampleFormControlSelect1" name="product_type">
+                <select class="form-control" id="exampleFormControlSelect1" name="course">
 			      <option>Membership</option>
 			      <option>ITIL® v3 Foundation</option>
 			      <option>ITIL® v3 Practitioners</option>

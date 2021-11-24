@@ -22,6 +22,7 @@ class PortwalletController extends Controller
       return view('index');
     }
     public function payment(Request $request){
+      //dd($request);
 
 
         /*$validator = Validator::make($request->all(), [
@@ -66,8 +67,8 @@ class PortwalletController extends Controller
       //  dd($request->amount);
        $data = array(
            'order' => array(
-             'amount' => 1,
-            //  'amount' => floatval($request->amount),
+             //'amount' => 1,
+              'amount' => floatval($request->amount),
                'currency' => 'BDT',
               // 'redirect_url' => 'https://globalskills.com.bd/portwallet/portwallet_verify_transaction/shopping_cart',
                'redirect_url' => URL::to('/portwallet/portwallet_verify_transaction/shopping_cart'),
@@ -76,18 +77,18 @@ class PortwalletController extends Controller
                'validity' => 900,
            ),
            'product' => array(
-               'name' => "Manual Payment",
-              //  'name' => $request->course_title,
+               //'name' => "Manual Payment",
+                'name' => $request->course,
                'description' => 'Course Payment',
            ),
            'billing' => array(
                'customer' => array(
-                  // 'name' => $request->name,
-                    'name' => "Abu Sayeed",
-                     'email' => "abusayeed33343536@gmail.com",
+                   'name' => $request->name,
+                  //  'name' => "Abu Sayeed",
+                    // 'email' => "abusayeed33343536@gmail.com",
                         'phone' => "01575202028",
-                   //'email' => $request->email,
-                  // 'phone' => $request->phone,
+                   'email' => $request->email,
+                   'phone' => $request->number,
                    'address' => array(
                        'street' => 'Hayat Rose Park, Level 5, House No 16 Main Road, Bashundhara Residential Area',
                         'city' => 'Dhaka',
@@ -129,7 +130,7 @@ class PortwalletController extends Controller
    public function portwalletVerifyTransaction() {
 
 
-           return redirect('https://globaskills.com.bd/paymentsuccess');
+           return redirectTo('https://globaskills.com.bd/paymentsuccess');
 
        }
 
